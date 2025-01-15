@@ -554,11 +554,287 @@ video {
   display: none;
 }
 
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.l {
+  line-height: 1.5rem;
+}
+
+.m {
+  font-size: 0.875rem;
+}
+
+.s {
+  font-size: .75rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-\[700px\] {
+  height: 700px;
+}
+
+.h-\[650px\] {
+  height: 650px;
+}
+
+.max-h-max {
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+
+.max-h-fit {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.min-h-\[3rem\] {
+  min-height: 3rem;
+}
+
+.min-h-0 {
+  min-height: 0px;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[950px\] {
+  max-width: 950px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-\[var\(--light-gray\)\] {
+  border-color: var(--light-gray);
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[var\(--light-blue\)\] {
+  background-color: var(--light-blue);
+}
+
+.bg-\[var\(--marine-blue\)\] {
+  background-color: var(--marine-blue);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[url\(\.\/assets\/images\/bg-sidebar-desktop\.svg\)\] {
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-\[var\(--cool-gray\)\] {
+  color: var(--cool-gray);
+}
+
+.text-\[var\(--light-blue\)\] {
+  color: var(--light-blue);
+}
+
+.text-\[var\(--marine-blue\)\] {
+  color: var(--marine-blue);
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 html,
 body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
 }
 
 #root {
@@ -566,6 +842,9 @@ body {
   height: 100%;
   min-height: 100vh;
   background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 :root {
@@ -579,4 +858,10 @@ body {
   --magnolia: hsl(217, 100%, 97%);
   --alabaster: hsl(231, 100%, 99%);
   --white: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .mb\:bg-\[url\(\.\/assets\/images\/bg-sidebar-mobile\.svg\)\] {
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  }
 }
