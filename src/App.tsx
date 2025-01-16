@@ -1,14 +1,12 @@
-import React, { SetStateAction } from 'react'
+import React from 'react'
 import './App.css'
 import Step from './components/Step'
 import { v4 } from 'uuid'
 import Footer from './components/Footer'
-import clsx from 'clsx'
 import StepTwo from './steps/StepTwo'
 import StepThree from './steps/StepThree'
 import StepOne from './steps/StepOne'
 import StepFour from './steps/StepFour'
-import Duration from './components/Duration'
 declare global {
   interface FieldData { name: string, monthVal: string, yearVal: string }
   interface Form {
