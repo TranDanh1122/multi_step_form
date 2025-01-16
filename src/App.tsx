@@ -5,6 +5,7 @@ import { v4 } from 'uuid'
 import Footer from './components/Footer'
 import clsx from 'clsx'
 import StepTwo from './steps/StepTwo'
+import StepThree from './steps/StepThree'
 const steps = [
   { step: 1, title: "your info" },
   { step: 2, title: "select plan" },
@@ -23,12 +24,12 @@ function App() {
             steps.map(step => <Step step={step} current={true} key={v4()} />)
           }
         </div>
-        <div className='px-20 py-10 w-full h-full'>
+        <div className='px-20 py-10 w-full h-full flex flex-col'>
 
-            {/* stepcontent */}
-          <StepTwo/>
+          {/* stepcontent */}
 
-          <Footer hasBack={false} />
+          {/* end-stepcontent */}
+          <Footer hasBack={false} hasNext={false} />
         </div>
       </div>
     </>
