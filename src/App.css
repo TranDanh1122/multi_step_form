@@ -778,6 +778,10 @@ video {
   background-image: url(./assets/images/bg-sidebar-desktop.svg);
 }
 
+.bg-\[url\(\.\/images\/bg-sidebar-desktop\.svg\)\] {
+  background-image: url(./images/bg-sidebar-desktop.svg);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1089,6 +1093,10 @@ body {
 
   .mb\:bg-\[url\(\.\/assets\/images\/bg-sidebar-mobile\.svg\)\] {
     background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  }
+
+  .mb\:bg-\[url\(\.\/images\/bg-sidebar-mobile\.svg\)\] {
+    background-image: url(./images/bg-sidebar-mobile.svg);
   }
 
   .mb\:px-0 {

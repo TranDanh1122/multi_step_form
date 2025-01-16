@@ -135,8 +135,8 @@ function App() {
   return (
     <>
       <div className='p-4 w-full mb:w-[90%] h-[650px] mb:h-max max-w-[950px] mb:max-w-none bg-white flex mb:flex-col justify-start rounded-2xl items-stretch'>
-        <div className='w-1/3 mb:w-full bg-[url(./assets/images/bg-sidebar-desktop.svg)] bg-cover bg-no-repeat bg-center
-        mb:bg-[url(./assets/images/bg-sidebar-mobile.svg)] 
+        <div className='w-1/3 mb:w-full bg-[url(./images/bg-sidebar-desktop.svg)] bg-cover bg-no-repeat bg-center
+        mb:bg-[url(./images/bg-sidebar-mobile.svg)] 
         h-full flex flex-col mb:flex-row gap-8 px-8 py-10'>
           {
             steps.map((step, idx) => <Step step={step} current={idx == index} key={v4()} />)
