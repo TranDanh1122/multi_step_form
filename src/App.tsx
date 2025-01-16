@@ -67,7 +67,7 @@ const useForm = (stepForms: React.ReactElement[]) => {
   }
   const next = (data: Form) => {
     if (checkValid(data)) {
-      setIndex(i => {        
+      setIndex(i => {
         if (stepForms.length - 1 == i) {
           setEnd(true)
           return i
@@ -136,18 +136,18 @@ function App() {
 
   return (
     <>
-      <div className='p-4 w-full h-[650px] max-w-[950px] bg-white flex justify-start rounded-2xl items-stretch'>
-        <div className='w-1/3 bg-[url(./assets/images/bg-sidebar-desktop.svg)] bg-cover bg-no-repeat bg-center
+      <div className='p-4 w-full mb:w-[90%] h-[650px] mb:h-max max-w-[950px] mb:max-w-none bg-white flex mb:flex-col justify-start rounded-2xl items-stretch'>
+        <div className='w-1/3 mb:w-full bg-[url(./assets/images/bg-sidebar-desktop.svg)] bg-cover bg-no-repeat bg-center
         mb:bg-[url(./assets/images/bg-sidebar-mobile.svg)] 
-        h-full flex flex-col gap-8 px-8 py-10'>
+        h-full flex flex-col mb:flex-row gap-8 px-8 py-10'>
           {
             steps.map((step, idx) => <Step step={step} current={idx == index} key={v4()} />)
           }
         </div>
-        <div className='px-20 py-10 w-full h-full flex flex-col gap-4'>
+        <div className='px-20 mb:px-0 py-10 w-full h-full flex flex-col gap-4 mb:gap-2'>
           {!end && stepForms[index]}
           {/* end-stepcontent */}
-          {!end && <Footer hasBack={hasBack} handleNext={() => next(data)} handleBack={back} hasNext={hasNext} />}
+          {!end && window.innerWidth > 767 && <Footer hasBack={hasBack} handleNext={() => next(data)} handleBack={back} hasNext={hasNext} />}
 
           {end && <>
             <img src="./assets/images/icon-thank-you.svg" alt="thankyou" className='w-20 h-20 object-cover mx-auto' />
@@ -156,6 +156,8 @@ function App() {
           </>}
         </div>
       </div>
+      {!end && window.innerWidth < 767 && <Footer hasBack={hasBack} handleNext={() => next(data)} handleBack={back} hasNext={hasNext} />}
+
     </>
   )
 }

@@ -600,6 +600,10 @@ video {
   height: 2.5rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -610,10 +614,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .min-h-\[3rem\] {
@@ -628,16 +628,16 @@ video {
   width: 2.5rem;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .w-8 {
   width: 2rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .max-w-\[950px\] {
@@ -944,12 +944,19 @@ body {
 
 #root {
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 100vh;
+  overflow-y: scroll;
   background-color: var(--light-blue);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width:767px) {
+  #root {
+    flex-direction: column;
+  }
 }
 
 :root {
@@ -997,7 +1004,95 @@ body {
 }
 
 @media (min-width: 0) and (max-width: 767px) {
+  .mb\:fixed {
+    position: fixed;
+  }
+
+  .mb\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .mb\:left-0 {
+    left: 0px;
+  }
+
+  .mb\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mb\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .mb\:flex {
+    display: flex;
+  }
+
+  .mb\:hidden {
+    display: none;
+  }
+
+  .mb\:h-max {
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .mb\:max-h-\[15vh\] {
+    max-height: 15vh;
+  }
+
+  .mb\:w-\[100vw\] {
+    width: 100vw;
+  }
+
+  .mb\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .mb\:w-full {
+    width: 100%;
+  }
+
+  .mb\:max-w-none {
+    max-width: none;
+  }
+
+  .mb\:flex-row {
+    flex-direction: row;
+  }
+
+  .mb\:flex-col {
+    flex-direction: column;
+  }
+
+  .mb\:items-center {
+    align-items: center;
+  }
+
+  .mb\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .mb\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .mb\:gap-4 {
+    gap: 1rem;
+  }
+
+  .mb\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  }
+
   .mb\:bg-\[url\(\.\/assets\/images\/bg-sidebar-mobile\.svg\)\] {
     background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  }
+
+  .mb\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

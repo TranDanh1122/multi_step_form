@@ -30,12 +30,19 @@ body {
 
 #root {
     width: 100%;
-    height: 100%;
+    height: auto;
     min-height: 100vh;
+    overflow-y: scroll;
     background-color: var(--light-blue);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:767px) {
+    #root {
+        flex-direction: column;
+    }
 }
 
 :root {

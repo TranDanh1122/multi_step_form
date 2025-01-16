@@ -11,7 +11,7 @@ const Step = React.memo(({ step, current }: { step: StepProps, current: boolean 
                 "bg-[var(--light-blue)] text-[var(--marine-blue)]": current,
                 "bg-transparent border-[1px] border-solid border-white text-white": !current
             })}>{step.step}</h3>
-            <div className='flex flex-col uppercase'>
+            <div className='flex flex-col uppercase mb:hidden'>
                 <h3 className='text-[var(--light-blue)] s '>Step {step.step}</h3>
                 <h2 className='text-white font-bold m'>{step.title}</h2>
             </div>
