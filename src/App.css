@@ -571,16 +571,17 @@ video {
   font-size: .75rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ml-auto {
   margin-left: auto;
 }
 
 .mt-10 {
   margin-top: 2.5rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .mt-auto {
@@ -611,6 +612,10 @@ video {
   height: 100%;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .min-h-\[3rem\] {
   min-height: 3rem;
 }
@@ -631,6 +636,10 @@ video {
   width: 100%;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .max-w-\[950px\] {
   max-width: 950px;
 }
@@ -641,6 +650,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -687,6 +700,10 @@ video {
   gap: 2rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -719,6 +736,10 @@ video {
   border-color: var(--purplish-blue);
 }
 
+.border-\[var\(--strawberry-red\)\] {
+  border-color: var(--strawberry-red);
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -740,6 +761,10 @@ video {
   background-color: var(--marine-blue);
 }
 
+.bg-\[var\(--purplish-blue\)\] {
+  background-color: var(--purplish-blue);
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -747,10 +772,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[var\(--purplish-blue\)\] {
-  background-color: var(--purplish-blue);
 }
 
 .bg-\[url\(\.\/assets\/images\/bg-sidebar-desktop\.svg\)\] {
@@ -822,6 +843,14 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-\[1\.25rem\] {
   font-size: 1.25rem;
 }
@@ -836,6 +865,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .leading-5 {
@@ -862,6 +895,10 @@ video {
   color: var(--purplish-blue);
 }
 
+.text-\[var\(--strawberry-red\)\] {
+  color: var(--strawberry-red);
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -877,6 +914,10 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-opacity {
@@ -949,6 +990,10 @@ body {
   width: .75rem;
   height: .75rem;
   border-radius: 50%;
+}
+
+.hover\:text-\[var\(--marine-blue\)\]:hover {
+  color: var(--marine-blue);
 }
 
 @media (min-width: 0) and (max-width: 767px) {

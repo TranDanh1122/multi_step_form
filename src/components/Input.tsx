@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 interface InputProps {
     name: string,
@@ -10,10 +11,13 @@ interface InputProps {
 }
 const Input = React.memo(({ placeholder, label, name, value, error, onChange, step }: InputProps): React.JSX.Element => {
     return (<>
-        <fieldset className='flex flex-col gap-2'>
-            <label htmlFor="name" className='m text-[var(--marine-blue)]'>{label}</label>
-            <input type="text" onChange={(e) => onChange(name, e.target.value, step)} value={value} name={name} placeholder={placeholder} className='font-medium l border-[1px] border-solid border-[var(--light-gray)] px-4 py-3 rounded-md min-h-[3rem]' />
-            {error}
+        <fieldset className='flex flex-wrap justify-between gap-y-2 gap-2'>
+            <label htmlFor="name" className='m text-[var(--marine-blue)] font-bold'>{label}</label>
+            <span className="text-right l text-[var(--strawberry-red)] font-bold">{error}</span>
+            <input type="text" onChange={(e) => onChange(name, e.target.value, step)} value={value} name={name} placeholder={placeholder} className={clsx('w-full font-medium l border-[1px] border-solid  px-4 py-3 rounded-md min-h-[3rem]', {
+                "border-[var(--strawberry-red)]": error,
+                "border-[var(--light-gray)]": !error
+            })} />
         </fieldset>
     </>)
 })

@@ -2,7 +2,7 @@ import React from "react";
 import Duration from "../components/Duration";
 import Plan from "../components/Plan";
 import { v4 } from "uuid";
-export default function StepTwo({ data, onChange }: { data: Form, onChange: (name: string, value: FieldData | string, step: string) => void }): React.JSX.Element {
+export default function StepTwo({ data, onChange, error }: { data: Form, error: { [key: string]: string }, onChange: (name: string, value: FieldData | string, step: string) => void }): React.JSX.Element {
 
     return (<>
         <div className='flex flex-col gap-6'>
@@ -16,6 +16,7 @@ export default function StepTwo({ data, onChange }: { data: Form, onChange: (nam
                 <Plan step="step2" key={v4()} duration={data.step2.duration} onChange={onChange} title="Pro" image="./assets/images/icon-pro.svg" selected={data.step2.plan.name == "pro"} monthvalue="15" yearvalue="150" />
             </div>
             <Duration duration={data.step2.duration} handleChange={(e) => { onChange("duration", e.target.value, "step2") }} />
+            <span className="text-center l text-[var(--strawberry-red)] font-bold">{error.plan}</span>
         </div>
     </>)
 }

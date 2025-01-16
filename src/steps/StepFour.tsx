@@ -1,5 +1,5 @@
 import React from "react";
-export default function StepFour({ data }: { data: Form }): React.JSX.Element {
+export default function StepFour({ data, setIdx }: { data: Form, setIdx: React.Dispatch<React.SetStateAction<number>> }): React.JSX.Element {
     const [total, setTotal] = React.useState<number>(0)
     React.useEffect(() => {
         const totalAddons = data.step3.add_ons.reduce((sum: number, add: FieldData) => {
@@ -19,8 +19,8 @@ export default function StepFour({ data }: { data: Form }): React.JSX.Element {
                 <div className='flex flex-col bg-[var(--magnolia)]'>
                     <div className='flex justify-between items-center p-6 '>
                         <div>
-                            <h2 className='l font-medium text-[var(--marine-blue)]'>{data.step2.plan.name} ({data.step2.duration == "1" ? "Yearly" : "Monthly"})</h2>
-                            <span className='underline m text-[var(--cool-gray)] cursor-pointer'>Change</span>
+                            <h2 className='l font-medium text-[var(--marine-blue)] capitalize'>{data.step2.plan.name} ({data.step2.duration == "1" ? "Yearly" : "Monthly"})</h2>
+                            <span onClick={() => setIdx(1)} className='underline m text-[var(--cool-gray)] cursor-pointer'>Change</span>
                         </div>
                         <span className='l font-bold'>{data.step2.duration == "1" ? `$${data.step2.plan.yearVal}/yr` : `$${data.step2.plan.monthVal}/mo`} </span>
                     </div>
