@@ -6,11 +6,13 @@ interface AddOns {
     desc: string,
     monthvalue: string,
     yearvalue: string,
-    duration: number
+    duration: string,
+    step: string,
+    onChange: (name: string, value: FieldData, step: string) => void
 }
-const AddOns = React.memo(({ selected, duration, title, desc, monthvalue, yearvalue }: AddOns) => {
+const AddOns = React.memo(({ selected, duration, title, desc, monthvalue, yearvalue, onChange, step }: AddOns) => {
     return (<>
-        <div className={clsx('flex justify-start items-center px-6 py-5 gap-6 w-full border-[1px] border-solid rounded-lg', {
+        <div onClick={() => onChange("add_ons", { name: title.toLowerCase(), monthVal: monthvalue, yearVal: yearvalue }, step)} className={clsx('flex justify-start items-center px-6 py-5 gap-6 w-full border-[1px] border-solid rounded-lg', {
             "border-[var(--light-gray)] ": !selected,
             "border-[var(--purplish-blue)] bg-[var(--alabaster)]": selected
         })}>
@@ -19,7 +21,7 @@ const AddOns = React.memo(({ selected, duration, title, desc, monthvalue, yearva
                 <h2 className='l font-medium text-[var(--marine-blue)]'>{title}</h2>
                 <span className='m text-[var(--light-gray)]'>{desc}</span>
             </div>
-            <span className='ml-auto m text-[var(--purplish-blue)]'>{duration == 1 ? yearvalue : monthvalue} </span>
+            <span className='ml-auto m text-[var(--purplish-blue)]'>+${duration == "1" ? yearvalue : monthvalue}/{duration == "1" ? "yr" : "mo"} </span>
         </div>
     </>)
 })
